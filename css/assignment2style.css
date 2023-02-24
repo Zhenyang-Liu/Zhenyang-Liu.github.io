@@ -1,0 +1,384 @@
+/*author: Zhenyang Liu*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #eaecee;
+}
+main{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#video_container_top{
+    width: 100vw;
+    height: 12vw;
+    overflow: hidden;
+}
+#video_container_bot{
+    width: 100vw;
+    height: 12vw;
+    overflow: hidden;
+    position: relative;
+}
+#background{
+    width: 100vw;
+    height: 12vw;
+    object-fit: cover;
+}
+#bell_image{
+    height: 8.2vw;
+    position: absolute;
+    top: 0.95vw;
+    left: 1.7vw;
+}
+#bell_border{
+    height: 10.35vw;
+    position: absolute;
+    top: 0.78vw;
+    left: 1.95vw;
+}
+#logoWord{
+    height: 5vw;
+    position: absolute;
+    top: 3.65vw;
+    right: 11.5vw;
+}
+#logoBorder{
+    height: 9vw;
+    position: absolute;
+    top: 1.5vw;
+    right: 1.6vw;
+}
+#logoHead{
+    height: 3.8vw;
+    position: absolute;
+    top: 4.1vw;
+    right: 4.2vw;
+}
+
+#canvas_control{
+    height: 40vw;
+    width: 99vw;
+    background: #eaecee;
+    border: 0.25vw #14455c solid;
+    border-radius: 0.5vw;
+    margin: 1vw 0.25vw 0 0.25vw;
+}
+
+#doraemon_canvas{
+    position: relative;
+    left: 13vw;
+    top: 5vw;
+    width:30vw;
+}
+.button{
+    width: 10vw;
+    height: 4vw;
+    position: absolute;
+    right:18vw;
+    background: #00a0e9;
+    color: white;
+    border: solid 0.2vw #000;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+}
+.button:hover {
+    background: #65bae1;
+    cursor: pointer;
+}
+#neutral{
+    top: 21.5vw;
+}
+#happy{
+    top: 30.5vw;
+}
+#fearful{
+    top: 39.5vw;
+}
+#waterSpray{
+    position: absolute;
+    width: 12.5vw;
+    right: 5.5vw;
+    top: 22.2vw;
+    display: none;
+}
+.star{
+    width: 10vw;
+    position: absolute;
+    display: none;
+}
+#startopleft{
+    top: 13vw;
+    left: 1vw;
+}
+#starbotright{
+    top: 40vw;
+    left: 45vw;
+}
+#snow{
+    width: 99vw;
+    height: 40vw;
+    object-fit: cover;
+}
+.init{
+    position: absolute;
+    display: none;
+}
+#loop{
+    width: 9vw;
+    right: 30vw;
+    top: 28vw;
+}
+#yellowbubbles{
+    width: 99vw;
+    height: 40vw;
+    object-fit: cover;
+}
+.blueFlash{
+    width: 10vw;
+    position: absolute;
+    display: none;
+}
+#blueFlashtopright{
+    left: 46vw;
+    top: 14vw;
+
+}
+#blueFlashbotleft{
+    left: 2vw;
+    top: 40vw;
+}
+h1{
+    padding: 3vw 15vw 3vw 15vw;
+    font-size: 2vw;
+}
+section{
+    padding: 0 15vw 3vw 15vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+#fdc{
+    width: 60vw;
+    border: solid 0.2vw #e0002a;
+    border-radius: 1vw;
+    padding: 1vw 5vw 1vw 5vw;
+    background: #fff;
+}
+#fdc h2, #flc h2,#adc h2{
+    font-size: 1.5vw;
+}
+#flc h3{
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
+#fdc p{
+    margin: 0.3vw 0 1vw 0;
+    font-size: 1.1vw;
+}
+#flc{
+    width: 60vw;
+    border: solid 0.2vw #00a0e9;
+    border-radius: 1vw;
+    padding: 1vw 5vw 1vw 5vw;
+    background: #fff;
+}
+#flc p{
+    margin: 0.3vw 0 1vw 0;
+    font-size: 1.1vw;
+}
+#adc p{
+    margin: 0.3vw 0 0.1vw 0;
+    font-size: 1.1vw;
+}
+#adc{
+    width: 60vw;
+    border: solid 0.2vw #ffe43b;
+    border-radius: 1vw;
+    padding: 1vw 5vw 1vw 5vw;
+    background: #fff;
+}
+.footer_copyright{
+    position: absolute;
+    margin: 2vw 0 2vw 0;
+    width: 100vw;
+    text-align: center;
+    font-size: 1vw;
+    bottom: 1%;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#waveline{
+    position: absolute;
+    width: 6vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+}
+@media (max-width:992px){
+    #video_container_top{
+        height: 40vw;
+    }
+    #video_container_bot{
+        height: 40vw;
+    }
+    #background{
+        height: 40vw;
+    }
+    #bell_image{
+        height: 20vw;
+        top: 8.2vw;
+        left: 1.45vw;
+    }
+    #bell_border{
+        height: 25.35vw;
+        top: 7.78vw;
+        left: 1.95vw;
+    }
+    #logoWord{
+        height: 14vw;
+        top: 13.5vw;
+        right: 24.5vw;
+    }
+    #logoBorder{
+        height: 22vw;
+        top: 9.5vw;
+        right: 1.6vw;
+    }
+    #logoHead{
+        height: 9.8vw;
+        top: 15.5vw;
+        right: 7.8vw;
+    }
+    
+    #canvas_control{
+        height: 130vw;
+        width: 96vw;
+        background: #eaecee;
+        border: 0.5vw #14455c solid;
+        border-radius: 1.5vw;
+        margin: 1vw 5.5vw 0 1.5vw;
+    }
+    
+    #doraemon_canvas{
+        left: 8vw;
+        top: 5vw;
+        width:80vw;
+    }
+    .button{
+        width: 20vw;
+        height: 8vw;
+        right:40vw;
+        border: solid 0.4vw #000;
+        border-radius: 1.5vw;
+        font-size: 3.7vw;
+    }
+
+    #neutral{
+        top: 131vw;
+    }
+    #happy{
+        top: 143vw;
+    }
+    #fearful{
+        top: 155vw;
+    }
+
+    #waterSpray{
+        width: 25vw;
+        right: 14.5vw;
+        top: 131.5vw;
+    }
+    .star{
+        width: 16vw;
+    }
+    #startopleft{
+        top: 43vw;
+        left: 3.5vw;
+    }
+    #starbotright{
+        top: 110vw;
+        left: 80.5vw;
+    }
+    #snow{
+        width: 96vw;
+        height: 130vw;
+    }
+
+    #loop{
+        width: 9vw;
+        right: 62vw;
+        top: 130.5vw;
+    }
+    #yellowbubbles{
+        width: 96vw;
+        height: 130vw;
+    }
+    .blueFlash{
+        width: 16vw;
+    }
+    #blueFlashtopright{
+        left: 80.5vw;
+        top: 43vw;
+    }
+    #blueFlashbotleft{
+        left: 3.5vw;
+        top: 110vw;
+    }
+    h1{
+        padding: 3vw 15vw 3vw 15vw;
+        font-size: 7.5vw;
+        text-align: center;
+    }
+    section{
+        padding: 0 1.5vw 3vw 1.5vw;
+    }
+    #fdc{
+        width: 96vw;
+        border: solid 0.5vw #e0002a;
+        border-radius: 1.5vw;
+        padding: 1vw 5vw 1vw 5vw;
+    }
+    #fdc h2, #flc h2,#adc h2{
+        font-size: 4.8vw;
+        margin-top: 2vw;
+    }
+    #flc h3{
+        font-size: 4.2vw;
+        margin-top: 2vw;
+    }
+    #fdc p{
+        margin: 1vw 0 3vw 0;
+        font-size: 4.1vw;
+    }
+    #flc{
+        width: 96vw;
+        border: solid 0.5vw #00a0e9;
+        border-radius: 1.5vw;
+        padding: 1vw 5vw 1vw 5vw;
+    }
+    #flc p{
+        margin: 0.5vw 0 5vw 0;
+        font-size: 4.1vw;
+    }
+    #adc p{
+        margin: 2vw 0 1.5vw 0;
+        font-size: 4.1vw;
+    }
+    #adc{
+        width: 96vw;
+        border: solid 0.5vw #ffe43b;
+        border-radius: 1.5vw;
+        padding: 1vw 5vw 1vw 5vw;
+    }
+    .footer_copyright{
+        margin: 2vw 0 2vw 0;
+        width: 100vw;
+        font-size: 3.5vw;
+        bottom: 10%;
+    }
+    #waveline{
+        width: 20vw;
+        top: 15%;
+    }
+}

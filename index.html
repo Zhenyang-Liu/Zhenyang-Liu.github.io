@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhenyang Liu">
+    <link rel="stylesheet" href="css/assignment2style.css">
+    <title>Doraemon Canvas</title>
+</head>
+<body>
+    <header>
+        <div id="video_container_top">
+            <video id="background" autoplay="autoplay" muted="muted" loop="loop" src="./images/backgroundvideo.mp4"></video>
+        </div>
+        <div id="bell">
+            <img id="bell_image" src="./images/bell.png" alt="bell image">
+            <img id="bell_border" src="./images/bellBorder.gif" alt="bell Border">
+        </div>
+        <div>
+            <img id="logoWord" src="./images/logoWord.png" alt="logo Word">
+            <img id="logoBorder" src="./images/logoBorder.gif" alt="logo Border">
+            <img id="logoHead" src="./images/logoHead.png" alt="logo Head">
+        </div>
+    </header>
+    <main>
+        <div id="canvas_control">
+            <img src="./images/star.webp" alt="star1" id="startopleft" class="star">
+            <img src="./images/star.webp" alt="star2" id="starbotright" class="star">
+            <img src="./images/snow.webp" alt="snow" id="snow" class="star">
+            <img src="./images/loop.gif" alt="loop sign" id="loop" class="init">
+            <img src="./images/yellowbubbles.webp" alt="yellowbubbles" id="yellowbubbles" class="init">
+            <img src="./images/blueFlash.gif" alt="blueFlash1" id="blueFlashtopright" class="blueFlash">
+            <img src="./images/blueFlash.gif" alt="blueFlash2" id="blueFlashbotleft" class="blueFlash">
+            <canvas id="doraemon_canvas" width="1060" height="1080" ></canvas>
+            <button type="button" id="neutral" class="button">Neutral</button>
+            <img src="./images/waterSpray.gif" alt="waterSpray" id="waterSpray">
+            <button type="button" id="happy" class="button">Happy</button>
+            <button type="button" id="fearful" class="button">Fearful</button>
+        </div>
+        <h1>Brief description</h1>
+        <section id="function_description">
+            <div id="fdc">
+                <h2>Change expressions:</h2>
+                <p>
+                Three expressions of Doraemon are provided and can be switched by clicking the corresponding button.<br>(Initialisation: When double-clicking on an emoticon button will clear all effects of 'Eye Follow' and 'Eye Control' and will restore the default state of this expression.)
+                </p>
+                <h2>Eye Follow:</h2>
+                <p>
+                When the user clicks within the canvas, Doraemon's eyes will look in the direction of the user's click.
+                </p>
+                <h2>Eyes Control:</h2>
+                <p>
+                When the user clicks on Doraemon's eyes, Doraemon's eyes will close and open when clicked again.
+                </p>
+            </div>
+        </section>
+        <section id="function_logic">
+            <div id="flc">
+                <h2>Function logic</h2>
+                <h3>Eye position and state memory:</h3>
+                <p>
+                When Doraemon closes his eyes, he remembers the position of his eyes and when he opens them again, he looks to the position before his closed eyes. Similarly, when switching expressions after canvas events have taken effect, Doraemon will still remember the state and position of his eyes. If you want to restore the original state just double click the button.
+                </p>
+                <h3>About the position of the eyes when they are closed:</h3>
+                <p>
+                It is common sense that the state of the eyes when they are closed should not change with the position of the eyeballs, so the closed eye shape is fixed.
+                </p>
+                <h3>About clicking on the non-eye area of the canvas when the eyes are closed:</h3>
+                <p>
+                Doraemon will open its eyes and look directly in the direction of the user's click.
+                </p>
+                <h3>Additional Notes:</h3>
+                <p>
+                Due to the design of Doraemon as an anime character, the distance that the eyes move when clicked at different locations on the canvas has been carefully designed. Therefore the movement of the eyes is not particularly obvious in some click positions. This is a balanced solution to ensure the aesthetics of the look and the functionality of the program.
+                </p>
+            </div>
+        </section>
+        <section id="about_design">
+            <div id="adc">
+                <h2>About the design</h2>
+                <p>
+                With a responsive design for mobile devices. 
+                </p>
+                <p>
+                    With different interactive animations to make the pages more interesting.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="video_container_bot">
+          <img src="./images/waveline.gif" alt="waveline" id="waveline">
+          <div class="footer_copyright">@2022 Copyright Zhenyang Liu</div>
+          <video id="background_bottom" autoplay="autoplay" muted="muted" loop="loop" src="./images/backgroundvideo.mp4"></video>
+        </div>
+    </footer>
+    <script src="./js/assignment2script.js"></script>
+</body>
+</html>
