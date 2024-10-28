@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhenyang Liu">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <!--Navigation bar related source code-->
+        <nav class="nav">
+          <img class="logo" src="./images/logo.png" alt="logo">
+          <div class="mobile-menu">
+            <!--The three horizontal lines used to create the mobile navigation.-->
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <!--Building navigation with unordered lists-->
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./project_experience.html">Project Experience</a></li>
+            <li><a href="./work_experience.html">Work Experience</a></li>
+            <li><a href="./current_endeavors.html">Current Endeavors</a></li>
+          </ul>
+        </nav>  
+    </header>
+
+    <main>
+          <!--The header section of the page, including a background video.-->
+          <div class="head1">
+            <div class="video_contain">
+              <!--The background video loops automatically and in silent mode.-->
+              <video id="head_background_video" autoplay="autoplay" muted="muted" loop="loop" src="./images/head_background.mp4">
+              </video>
+            </div>
+
+            <div class="h1_content">
+              <div id="h1_content_Welcome">Zhenyang Liu</div>
+              <div id="h1_content_To">Student in University of Sheffield</div>
+              <div id="h1_content_ZP">Software development  /  Large Language Models(LLMs) Research</div>
+               
+            </div>
+          </div>
+
+          <div class="homepage_contnt">
+            <!--Includes boxes for different cards, using a nested structure.-->
+
+            <div class="contnt_block_P-E">
+              <div class="photo_block">
+                <img id="photo" src="./images/zhenyang.jpg" alt="Zhenyang's photo">
+              </div>
+              <div class="small_block">
+                <p id="elements-head">Contact info</p>
+                <p id="elements-tel">Tel:<br>(+44) 7340746307<br>(+86) 17605250798</p>
+                <p id="elements-email">Email:<br>zhenyang_liu@yeah.net</p>
+                <p id="elements-location">Location:<br>Sheffield, United Kingdom</p>
+              </div>
+            </div>
+            
+            <div class="contnt_block_AM">
+              <div class="icon-head">
+                <img src="./images/aboutme_icon.gif" alt="aboutme icon">
+                <div class="icon-content">ABOUT ME</div>
+              </div>
+              <p class="block_paragraph">I am a Computer Science undergraduate at the University of Sheffield, specializing in Artificial Intelligence. My focus is <br> on
+                 large language models, autonomous robotics, and practical AI solutions that positively impact daily life.<br><br>I am passionate about driving innovation that makes a strong social impact and enhances the user experience.</p>
+            </div>
+            
+            <div class="contnt_block_EDU">
+              <div class="icon-head_EDU">
+                <img src="./images/education_icon.gif" alt="education icon">
+                <div class="icon-content">EDUCATION</div>
+              </div>
+              <p class="block_paragraph_EDU">The University of Sheffield<br>Sept 2022 - Jun 2025<br><br>Course:<br>Computer Science (AI)<br>GPA: 3.87/4.0<br><br>Scholarships:<br>(2022, 2023, 2024)<br>International Undergraduate Scholarship</p>
+            </div>
+
+            <div class="contnt_block_AW">
+              <div class="icon-head_AW">
+                <img src="./images/aboutweb_icon.gif" alt="aboutweb icon">
+                <div class="icon-content_AW">TECHNICAL Skills</div>
+              </div>
+              <p class="block_paragraph_AW">Programming Languages: Java, Python, Ruby, Haskell, HTML & CSS, JavaScript<br><br>Front-End Frameworks: Tailwind, Bootstrap, React<br><br>Database Management: MySQL, SQLite</p>
+            </div>
+
+          </div>  
+    </main>
+
+    <footer>
+      <div class="footer_copyright">@2024 Copyright Zhenyang Liu</div>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
